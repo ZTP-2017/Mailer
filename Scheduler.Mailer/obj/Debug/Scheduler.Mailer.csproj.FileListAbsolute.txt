@@ -1,0 +1,9 @@
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.csproj.CoreCompileInputs.cache
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\bin\Debug\Scheduler.Mailer.dll
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\bin\Debug\Scheduler.Mailer.pdb
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\bin\Debug\FluentMailer.dll
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\bin\Debug\FluentMailer.Factory.dll
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\bin\Debug\RazorEngine.dll
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\bin\Debug\System.Web.Razor.dll
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.dll
+c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.pdb

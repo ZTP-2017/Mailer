@@ -1,0 +1,40 @@
+2017-10-16 19:00:36.801 +02:00 [Error] Could not find file 'c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler\bin\Debug\Settings.txt'.
+2017-10-16 20:25:42.783 +02:00 [Information] Start service
+2017-10-16 20:25:43.264 +02:00 [Information] Loaded data from file
+2017-10-16 20:37:34.398 +02:00 [Information] Start service
+2017-10-16 20:37:34.553 +02:00 [Information] Loaded data from file
+2017-10-16 20:37:55.701 +02:00 [Information] Start service
+2017-10-16 20:37:55.872 +02:00 [Information] Loaded data from file
+2017-10-16 20:38:13.406 +02:00 [Information] Start service
+2017-10-16 20:38:13.553 +02:00 [Information] Loaded data from file
+2017-10-16 20:39:00.105 +02:00 [Information] Start service
+2017-10-16 20:39:00.271 +02:00 [Information] Loaded data from file
+2017-10-16 20:41:26.707 +02:00 [Information] Start service
+2017-10-16 20:41:26.851 +02:00 [Information] Loaded data from file
+2017-10-16 20:41:55.568 +02:00 [Information] Start service
+2017-10-16 20:41:55.704 +02:00 [Information] Loaded data from file
+2017-10-16 20:51:54.937 +02:00 [Information] Start service
+2017-10-16 20:51:55.087 +02:00 [Information] Loaded data from file
+2017-10-16 20:57:29.459 +02:00 [Information] Start service
+2017-10-16 20:57:29.639 +02:00 [Information] Loaded data from file
+2017-10-16 21:04:36.714 +02:00 [Information] Start service
+2017-10-16 21:04:36.999 +02:00 [Information] Loaded data from file
+2017-10-16 21:15:25.477 +02:00 [Information] Start service
+2017-10-16 21:15:25.682 +02:00 [Information] Loaded data from file
+2017-10-16 21:15:40.451 +02:00 [Error] Types that inherit IEnumerable cannot be auto mapped. Did you accidentally call GetRecord or WriteRecord which acts on a single record instead of calling GetRecords or WriteRecords which acts on a list of records?
+2017-10-16 21:15:50.330 +02:00 [Information] Start service
+2017-10-16 21:15:50.427 +02:00 [Information] Loaded data from file
+2017-10-16 21:16:07.762 +02:00 [Information] Start service
+2017-10-16 21:16:07.856 +02:00 [Information] Loaded data from file
+2017-10-16 21:16:21.841 +02:00 [Information] Start service
+2017-10-16 21:16:21.934 +02:00 [Information] Loaded data from file
+2017-10-16 21:16:37.424 +02:00 [Information] Start service
+2017-10-16 21:16:37.883 +02:00 [Information] Loaded data from file
+2017-10-16 21:17:06.894 +02:00 [Information] Start service
+2017-10-16 21:18:46.008 +02:00 [Information] Start service
+2017-10-16 21:19:35.219 +02:00 [Information] Start service
+2017-10-16 21:19:39.950 +02:00 [Information] Loaded data from file
+2017-10-16 21:20:04.998 +02:00 [Error] Types that inherit IEnumerable cannot be auto mapped. Did you accidentally call GetRecord or WriteRecord which acts on a single record instead of calling GetRecords or WriteRecords which acts on a list of records?
+2017-10-16 21:21:44.008 +02:00 [Information] Start service
+2017-10-16 21:21:44.155 +02:00 [Information] Loaded data from file
+2017-10-16 21:22:00.213 +02:00 [Information] Updated data in file
