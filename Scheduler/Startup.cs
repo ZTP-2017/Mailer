@@ -1,4 +1,5 @@
 ﻿using Hangfire;
+using Hangfire.MemoryStorage;
 using Microsoft.Owin;
 using Owin;
 
@@ -9,9 +10,7 @@ namespace Scheduler
     {
         public void Configuration(IAppBuilder app)
         {
-            GlobalConfiguration.Configuration
-                .UseSqlServerStorage(@"Server=ZTP\SQLEXPRESS;Database=HangfireDb;Trusted_Connection=True;");
-
+            GlobalConfiguration.Configuration.UseMemoryStorage();
             app.UseHangfireDashboard();
             app.UseHangfireServer();
         }

@@ -15,10 +15,10 @@ namespace Scheduler
                     service.WhenStopped(s => s.Stop());
                 });
 
-                configure.RunAsLocalSystem();
+                configure.RunAsLocalService();
                 configure.SetServiceName("MailerService");
                 configure.SetDisplayName("Mailer Service");
-                configure.SetDescription("Mailer service  ZTP");
+                configure.SetDescription("Mailer service ZTP");
             });
         }
     }

@@ -7,3 +7,12 @@ c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer
 c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\bin\Debug\System.Web.Razor.dll
 c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.dll
 c:\users\michal\documents\visual studio 2017\Projects\Scheduler\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.pdb
+E:\ZTP\Mailer\Scheduler.Mailer\bin\Debug\Scheduler.Mailer.dll
+E:\ZTP\Mailer\Scheduler.Mailer\bin\Debug\Scheduler.Mailer.pdb
+E:\ZTP\Mailer\Scheduler.Mailer\bin\Debug\FluentMailer.dll
+E:\ZTP\Mailer\Scheduler.Mailer\bin\Debug\FluentMailer.Factory.dll
+E:\ZTP\Mailer\Scheduler.Mailer\bin\Debug\RazorEngine.dll
+E:\ZTP\Mailer\Scheduler.Mailer\bin\Debug\System.Web.Razor.dll
+E:\ZTP\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.csprojResolveAssemblyReference.cache
+E:\ZTP\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.dll
+E:\ZTP\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.pdb

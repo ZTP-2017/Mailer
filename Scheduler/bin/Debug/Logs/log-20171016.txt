@@ -38,3 +38,64 @@
 2017-10-16 21:21:44.008 +02:00 [Information] Start service
 2017-10-16 21:21:44.155 +02:00 [Information] Loaded data from file
 2017-10-16 21:22:00.213 +02:00 [Information] Updated data in file
+2017-10-16 23:08:14.628 +02:00 [Error] File not found
+System.IO.FileNotFoundException: Could not find file 'E:\ZTP\Mailer\Scheduler\bin\Debug\Data\data.csv'.
+File name: 'E:\ZTP\Mailer\Scheduler\bin\Debug\Data\data.csv'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path)
+   at Scheduler.Data.LoadDataFromFile() in E:\ZTP\Mailer\Scheduler\Data.cs:line 19
+2017-10-16 23:08:14.713 +02:00 [Information] Start service
+2017-10-16 23:29:10.115 +02:00 [Information] Starting Hangfire Server
+2017-10-16 23:29:10.148 +02:00 [Information] Using job storage: 'Hangfire.MemoryStorage.MemoryStorage'
+2017-10-16 23:29:10.150 +02:00 [Information] Using the following options for Hangfire Server:
+2017-10-16 23:29:10.150 +02:00 [Information]     Worker count: 20
+2017-10-16 23:29:10.151 +02:00 [Information]     Listening queues: 'default'
+2017-10-16 23:29:10.152 +02:00 [Information]     Shutdown timeout: 00:00:15
+2017-10-16 23:29:10.152 +02:00 [Information]     Schedule polling interval: 00:00:15
+2017-10-16 23:29:13.680 +02:00 [Information] Loaded data from file
+2017-10-16 23:36:22.553 +02:00 [Information] Starting Hangfire Server
+2017-10-16 23:36:22.585 +02:00 [Information] Using job storage: 'Hangfire.MemoryStorage.MemoryStorage'
+2017-10-16 23:36:22.588 +02:00 [Information] Using the following options for Hangfire Server:
+2017-10-16 23:36:22.588 +02:00 [Information]     Worker count: 20
+2017-10-16 23:36:22.589 +02:00 [Information]     Listening queues: 'default'
+2017-10-16 23:36:22.589 +02:00 [Information]     Shutdown timeout: 00:00:15
+2017-10-16 23:36:22.589 +02:00 [Information]     Schedule polling interval: 00:00:15
+2017-10-16 23:36:22.873 +02:00 [Information] Loaded data from file
+2017-10-16 23:36:37.814 +02:00 [Information] Starting Hangfire Server
+2017-10-16 23:36:37.843 +02:00 [Information] Using job storage: 'Hangfire.MemoryStorage.MemoryStorage'
+2017-10-16 23:36:37.843 +02:00 [Information] Using the following options for Hangfire Server:
+2017-10-16 23:36:37.844 +02:00 [Information]     Worker count: 20
+2017-10-16 23:36:37.844 +02:00 [Information]     Listening queues: 'default'
+2017-10-16 23:36:37.845 +02:00 [Information]     Shutdown timeout: 00:00:15
+2017-10-16 23:36:37.845 +02:00 [Information]     Schedule polling interval: 00:00:15
+2017-10-16 23:36:38.149 +02:00 [Information] Loaded data from file
+2017-10-16 23:37:12.614 +02:00 [Information] Updated data in file
+2017-10-16 23:38:03.169 +02:00 [Information] Starting Hangfire Server
+2017-10-16 23:38:03.197 +02:00 [Information] Using job storage: 'Hangfire.MemoryStorage.MemoryStorage'
+2017-10-16 23:38:03.197 +02:00 [Information] Using the following options for Hangfire Server:
+2017-10-16 23:38:03.198 +02:00 [Information]     Worker count: 20
+2017-10-16 23:38:03.198 +02:00 [Information]     Listening queues: 'default'
+2017-10-16 23:38:03.199 +02:00 [Information]     Shutdown timeout: 00:00:15
+2017-10-16 23:38:03.199 +02:00 [Information]     Schedule polling interval: 00:00:15
+2017-10-16 23:38:03.531 +02:00 [Information] Loaded data from file
+2017-10-16 23:38:14.886 +02:00 [Information] Starting Hangfire Server
+2017-10-16 23:38:14.913 +02:00 [Information] Using job storage: 'Hangfire.MemoryStorage.MemoryStorage'
+2017-10-16 23:38:14.914 +02:00 [Information] Using the following options for Hangfire Server:
+2017-10-16 23:38:14.914 +02:00 [Information]     Worker count: 20
+2017-10-16 23:38:14.915 +02:00 [Information]     Listening queues: 'default'
+2017-10-16 23:38:14.915 +02:00 [Information]     Shutdown timeout: 00:00:15
+2017-10-16 23:38:14.916 +02:00 [Information]     Schedule polling interval: 00:00:15
+2017-10-16 23:38:15.272 +02:00 [Information] Loaded data from file
+2017-10-16 23:38:28.713 +02:00 [Information] Updated data in file
+2017-10-16 23:39:24.110 +02:00 [Information] Starting Hangfire Server
+2017-10-16 23:39:24.140 +02:00 [Information] Using job storage: 'Hangfire.MemoryStorage.MemoryStorage'
+2017-10-16 23:39:24.140 +02:00 [Information] Using the following options for Hangfire Server:
+2017-10-16 23:39:24.141 +02:00 [Information]     Worker count: 20
+2017-10-16 23:39:24.141 +02:00 [Information]     Listening queues: 'default'
+2017-10-16 23:39:24.142 +02:00 [Information]     Shutdown timeout: 00:00:15
+2017-10-16 23:39:24.143 +02:00 [Information]     Schedule polling interval: 00:00:15
+2017-10-16 23:39:24.533 +02:00 [Information] Loaded data from file
+2017-10-16 23:39:35.125 +02:00 [Information] Updated data in file
