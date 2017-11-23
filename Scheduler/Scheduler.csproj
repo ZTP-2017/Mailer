@@ -35,14 +35,8 @@
     <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="CsvHelper, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
-      <HintPath>..\packages\CsvHelper.3.4.0\lib\net45\CsvHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentMailer, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentMailer.1.1.4\lib\FluentMailer.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentMailer.Factory, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentMailer.Factory.1.1.4\lib\FluentMailer.Factory.dll</HintPath>
+    <Reference Include="Hangfire.Autofac, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Autofac.2.3.1\lib\net45\Hangfire.Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Hangfire.Core, Version=1.6.17.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Hangfire.Core.1.6.17\lib\net45\Hangfire.Core.dll</HintPath>
@@ -107,15 +101,18 @@
     <Reference Include="Topshelf, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
       <HintPath>..\packages\Topshelf.4.0.3\lib\net452\Topshelf.dll</HintPath>
     </Reference>
+    <Reference Include="Topshelf.Autofac, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ebfabbe7fb167e88, processorArchitecture=MSIL">
+      <HintPath>..\packages\Topshelf.Autofac.3.1.1\lib\net452\Topshelf.Autofac.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigureService.cs" />
-    <Compile Include="Data.cs" />
-    <Compile Include="MailerService.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="ISender.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="Scheduler.cs" />
+    <Compile Include="Sender.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +120,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Scheduler.Data\Scheduler.Data.csproj">
+      <Project>{b5187eec-ce11-4224-8224-52feca6e9b63}</Project>
+      <Name>Scheduler.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Scheduler.Mailer\Scheduler.Mailer.csproj">
       <Project>{f685dfb7-fb0f-4cee-8849-ba55c0f3f45f}</Project>
       <Name>Scheduler.Mailer</Name>

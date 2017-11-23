@@ -16,3 +16,14 @@ E:\ZTP\Mailer\Scheduler.Mailer\bin\Debug\System.Web.Razor.dll
 E:\ZTP\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.csprojResolveAssemblyReference.cache
 E:\ZTP\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.dll
 E:\ZTP\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.pdb
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Scheduler.Mailer.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Scheduler.Mailer.pdb
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Autofac.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\FluentMailer.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\FluentMailer.Factory.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\RazorEngine.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\System.Web.Razor.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Autofac.xml
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.pdb

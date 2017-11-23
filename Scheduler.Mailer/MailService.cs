@@ -3,16 +3,11 @@ using System.Threading.Tasks;
 
 namespace Scheduler.Mailer
 {
-    public interface ISendMailService
-    {
-        Task SendEmail(string email, string body, string subject);
-    }
-
-    public class SendMailService : ISendMailService
+    public class MailService : IMailService
     {
         private readonly IFluentMailer _fluentMailer;
 
-        public SendMailService(IFluentMailer fluentMailer)
+        public MailService(IFluentMailer fluentMailer)
         {
             _fluentMailer = fluentMailer;
         }

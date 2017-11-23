@@ -1,10 +1,11 @@
 ﻿using Autofac;
-using FluentMailer.Factory;
-using FluentMailer.Interfaces;
 using Scheduler.Mailer;
-using Scheduler.Models;
+using Scheduler.Data;
 using Serilog;
 using System;
+using Hangfire;
+using Topshelf;
+using Topshelf.Autofac;
 
 namespace Scheduler
 {
@@ -14,20 +15,58 @@ namespace Scheduler
 
         static void Main(string[] args)
         {
-            var builder = new ContainerBuilder();
-            builder.RegisterType<Message>().As<IMessage>();
-            builder.RegisterType<SendMailService>().As<ISendMailService>();
-            builder.Register(c => FluentMailerFactory.Create()).As<IFluentMailer>();
-            Container = builder.Build();
-
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.LiterateConsole()
-                .WriteTo.RollingFile(Settings.LogsFilePath + "log-{Date}.txt")
-                .CreateLogger();
-
-            ConfigureService.Configure();
+            ConfigureAutofac();
+            ConfigureHangfire();
+            ConfigureLogger();
+            ConfigureTopshelf();
 
             Console.ReadKey();
+        }
+
+        private static void ConfigureAutofac()
+        {
+            var builder = new ContainerBuilder();
+
+            builder.RegisterType<Scheduler>();
+            
+            builder.RegisterModule<MailerModule>();
+            builder.RegisterModule<DataModule>();
+            builder.RegisterType<Sender>().As<ISender>();
+
+            Container = builder.Build();
+        }
+
+        private static void ConfigureHangfire()
+        {
+            GlobalConfiguration.Configuration.UseAutofacActivator(Container);
+        }
+
+        private static void ConfigureLogger()
+        {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.LiterateConsole()
+                .WriteTo.RollingFile("log-{Date}.txt")
+                .CreateLogger();
+        }
+
+        private static void ConfigureTopshelf()
+        {
+            HostFactory.Run(configure =>
+            {
+                configure.UseAutofacContainer(Container);
+                configure.Service<Scheduler>(service =>
+                {
+                    service.ConstructUsingAutofacContainer();
+                    service.WhenStarted(s => s.Start());
+                    service.WhenStopped(s => s.Stop());
+                });
+
+                configure.RunAsLocalService();
+                configure.SetServiceName("MailerService");
+                configure.SetDisplayName("Mailer Service");
+                configure.SetDescription("Mailer service ZTP");
+                configure.RunAsLocalService();
+            });
         }
     }
 }
