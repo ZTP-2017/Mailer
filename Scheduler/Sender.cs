@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Timers;
-using Scheduler.Data;
-using Scheduler.Mailer;
+using Scheduler.Data.Interfaces;
+using Scheduler.Interfaces;
+using Scheduler.Mailer.Interfaces;
 using Scheduler.Models;
 using Serilog;
 
@@ -13,14 +14,14 @@ namespace Scheduler
     public class Sender : ISender
     {
         private readonly IMailService _mailService;
-        private readonly IDataService _dataService;
 
         private Timer _timer;
+        private List<Message> _messages;
 
         public Sender(IMailService mailService, IDataService dataService)
         {
             _mailService = mailService;
-            _dataService = dataService;
+            _messages = dataService.GetAllMessages<Message>(Settings.DataFilePath);
         }
 
         public void SendEmails()
@@ -29,8 +30,12 @@ namespace Scheduler
             {
                 Log.Information("Get data from file");
 
-                var messages = GetNotSendedMessages();
-                if (messages.Count == 0) return;
+                var messages = GetMessages();
+                if (messages.Count == 0)
+                {
+                    Log.Information("Messages send");
+                    return;
+                }
 
                 var stopWatch = new Stopwatch();
                 stopWatch.Start();
@@ -38,11 +43,7 @@ namespace Scheduler
                 foreach (var message in messages)
                 {
                     _mailService.SendEmail(message.Email, message.Body, message.Subject);
-                    message.Status = "sent";
                 }
-
-                _dataService.UpdateData(messages, Consts.FilePath);
-                Log.Information("Messages send");
 
                 stopWatch.Stop();
 
@@ -57,14 +58,15 @@ namespace Scheduler
             }
         }
 
-        private List<Message> GetNotSendedMessages()
+        private List<Message> GetMessages()
         {
-            var data = _dataService.GetData<Message>(Consts.FilePath);
-            var notSendMessages = data.Where(x => string.IsNullOrEmpty(x.Status)).ToList();
+            var messages = _messages.Count() > 100 ?
+                _messages.Take(100).ToList() :
+                _messages;
 
-            return notSendMessages.Count() > 100 ? 
-                notSendMessages.Take(100).ToList() : 
-                notSendMessages;
+            _messages = _messages.Where(x => messages.All(y => x != y)).ToList();
+
+            return messages;
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)

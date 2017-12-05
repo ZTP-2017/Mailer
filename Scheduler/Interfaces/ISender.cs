@@ -1,4 +1,4 @@
-﻿namespace Scheduler
+﻿namespace Scheduler.Interfaces
 {
     public interface ISender
     {

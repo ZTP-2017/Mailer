@@ -4,12 +4,13 @@ using Scheduler.Data;
 using Serilog;
 using System;
 using Hangfire;
+using Scheduler.Interfaces;
 using Topshelf;
 using Topshelf.Autofac;
 
 namespace Scheduler
 {
-    class Program
+    public class Program
     {
         public static IContainer Container { get; set; }
 

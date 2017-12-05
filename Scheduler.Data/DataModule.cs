@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Scheduler.Data.Interfaces;
 
 namespace Scheduler.Data
 {

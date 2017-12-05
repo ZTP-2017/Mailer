@@ -27,3 +27,4 @@ C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bi
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.csprojResolveAssemblyReference.cache
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.dll
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.pdb
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.csproj.CoreCompileInputs.cache

@@ -1,11 +1,12 @@
 ﻿using System;
 using Hangfire;
 using Microsoft.Owin.Hosting;
+using Scheduler.Interfaces;
 using Serilog;
 
 namespace Scheduler
 {
-    class Scheduler
+    public class Scheduler
     {
         private readonly ISender _sender;
 
