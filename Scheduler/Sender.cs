@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Timers;
 using Scheduler.Data.Interfaces;
 using Scheduler.Interfaces;
 using Scheduler.Mailer.Interfaces;
@@ -14,8 +12,7 @@ namespace Scheduler
     public class Sender : ISender
     {
         private readonly IMailService _mailService;
-
-        private Timer _timer;
+        private static int skipMessagesCount;
         private List<Message> _messages;
 
         public Sender(IMailService mailService, IDataService dataService)
@@ -29,28 +26,13 @@ namespace Scheduler
             try
             {
                 Log.Information("Get data from file");
-
                 var messages = GetMessages();
-                if (messages.Count == 0)
-                {
-                    Log.Information("Messages send");
-                    return;
-                }
-
-                var stopWatch = new Stopwatch();
-                stopWatch.Start();
 
                 foreach (var message in messages)
                 {
                     _mailService.SendEmail(message.Email, message.Body, message.Subject);
+                    Log.Information($"Message {message.Subject} to {message.Email} was sent");
                 }
-
-                stopWatch.Stop();
-
-                _timer = new Timer(60000 - stopWatch.Elapsed.Milliseconds);
-                _timer.Elapsed += Timer_Elapsed;
-                _timer.AutoReset = true;
-                _timer.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -58,20 +40,18 @@ namespace Scheduler
             }
         }
 
-        private List<Message> GetMessages()
+        public void SetSkipValue(int value)
         {
-            var messages = _messages.Count() > 100 ?
-                _messages.Take(100).ToList() :
-                _messages;
-
-            _messages = _messages.Where(x => messages.All(y => x != y)).ToList();
-
-            return messages;
+            skipMessagesCount = value;
         }
 
-        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        private List<Message> GetMessages()
         {
-            SendEmails();
+            var messages = _messages.Skip(skipMessagesCount).Take(100).ToList();
+
+            skipMessagesCount += messages.Count;
+
+            return messages;
         }
     }
 }

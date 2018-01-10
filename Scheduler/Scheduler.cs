@@ -22,13 +22,15 @@ namespace Scheduler
             try
             {
                 _webApp = WebApp.Start<Startup>("http://localhost:8080");
-                
+
+                _sender.SetSkipValue(0);
+
                 RecurringJob.AddOrUpdate(
-                    () => Log.Information("Start service"),
+                    () => _sender.SendEmails(),
                     Cron.Daily
                 );
 
-                _sender.SendEmails();
+                Log.Information("Start service");
             }
             catch (Exception ex)
             {
