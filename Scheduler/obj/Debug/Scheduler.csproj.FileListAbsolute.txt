@@ -141,3 +141,4 @@ C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler\bin\Debug
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler\bin\Debug\zh\Hangfire.Core.resources.dll
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler\bin\Debug\CsvHelper.pdb
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler\obj\Debug\Scheduler.csproj.CoreCompileInputs.cache
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler\bin\Debug\Serilog.Sinks.ColoredConsole.dll

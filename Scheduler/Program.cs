@@ -3,6 +3,7 @@ using Scheduler.Mailer;
 using Scheduler.Data;
 using Serilog;
 using System;
+using System.Configuration;
 using Hangfire;
 using Scheduler.Interfaces;
 using Topshelf;
@@ -48,6 +49,7 @@ namespace Scheduler
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.LiterateConsole()
                 .WriteTo.RollingFile("log-{Date}.txt")
+                .WriteTo.ColoredConsole()
                 .CreateLogger();
         }
 
@@ -59,7 +61,7 @@ namespace Scheduler
                 configure.Service<Scheduler>(service =>
                 {
                     service.ConstructUsingAutofacContainer();
-                    service.WhenStarted(s => s.Start());
+                    service.WhenStarted(s => s.Start(GetAppSettings()));
                     service.WhenStopped(s => s.Stop());
                 });
                 
@@ -68,6 +70,15 @@ namespace Scheduler
                 configure.SetDescription("Mailer service ZTP");
                 configure.RunAsLocalService();
             });
+        }
+
+        private static Settings GetAppSettings()
+        {
+            return new Settings
+            {
+                HostingUrl = ConfigurationManager.AppSettings["hostingUrl"],
+                DataFilePath = ConfigurationManager.AppSettings["messagesFilePath"]
+            };
         }
     }
 }
