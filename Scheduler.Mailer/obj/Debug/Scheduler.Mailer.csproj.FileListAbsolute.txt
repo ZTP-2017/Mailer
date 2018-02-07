@@ -28,3 +28,16 @@ C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\ob
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.dll
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.pdb
 C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\obj\Debug\Scheduler.Mailer.csproj.CoreCompileInputs.cache
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Scheduler.Logger.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.Literate.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.RollingFile.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.ColoredConsole.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.Console.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.File.dll
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Scheduler.Logger.pdb
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.xml
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.Literate.xml
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.RollingFile.xml
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.Console.xml
+C:\Users\Michal\Documents\Visual Studio 2017\Projects\Mailer\Scheduler.Mailer\bin\Debug\Serilog.Sinks.File.xml

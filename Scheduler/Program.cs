@@ -1,11 +1,10 @@
 ﻿using Autofac;
 using Scheduler.Mailer;
 using Scheduler.Data;
-using Serilog;
 using System;
 using System.Configuration;
 using Hangfire;
-using Scheduler.Interfaces;
+using Scheduler.Logger;
 using Topshelf;
 using Topshelf.Autofac;
 
@@ -19,7 +18,6 @@ namespace Scheduler
         {
             ConfigureAutofac();
             ConfigureHangfire();
-            ConfigureLogger();
             ConfigureTopshelf();
 
             Console.ReadKey();
@@ -33,8 +31,12 @@ namespace Scheduler
             
             builder.RegisterModule<MailerModule>();
             builder.RegisterModule<DataModule>();
+            builder.RegisterModule<LoggerModule>();
+
             builder.RegisterType<Sender>();
             builder.RegisterType<Sender>().As<ISender>();
+
+            builder.RegisterInstance(GetAppSettings());
 
             Container = builder.Build();
         }
@@ -42,15 +44,6 @@ namespace Scheduler
         private static void ConfigureHangfire()
         {
             GlobalConfiguration.Configuration.UseAutofacActivator(Container);
-        }
-
-        private static void ConfigureLogger()
-        {
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.LiterateConsole()
-                .WriteTo.RollingFile("log-{Date}.txt")
-                .WriteTo.ColoredConsole()
-                .CreateLogger();
         }
 
         private static void ConfigureTopshelf()
@@ -61,7 +54,7 @@ namespace Scheduler
                 configure.Service<Scheduler>(service =>
                 {
                     service.ConstructUsingAutofacContainer();
-                    service.WhenStarted(s => s.Start(GetAppSettings()));
+                    service.WhenStarted(s => s.Start());
                     service.WhenStopped(s => s.Stop());
                 });
                 

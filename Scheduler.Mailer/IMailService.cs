@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Scheduler.Mailer.Interfaces
+namespace Scheduler.Mailer
 {
     public interface IMailService
     {

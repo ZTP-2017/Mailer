@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Scheduler.Data.Interfaces;
-using Scheduler.Interfaces;
-using Scheduler.Mailer.Interfaces;
+using Scheduler.Data;
+using Scheduler.Logger;
+using Scheduler.Mailer;
 using Scheduler.Models;
-using Serilog;
 
 namespace Scheduler
 {
@@ -16,11 +15,13 @@ namespace Scheduler
 
         private readonly IMailService _mailService;
         private readonly IDataService _dataService;
+        private readonly ILoggerService _loggerService;
 
-        public Sender(IMailService mailService, IDataService dataService)
+        public Sender(IMailService mailService, IDataService dataService, ILoggerService loggerService)
         {
             _mailService = mailService;
             _dataService = dataService;
+            _loggerService = loggerService;
         }
 
         public void LoadAllMessagesFromFile(string path)
@@ -32,18 +33,17 @@ namespace Scheduler
         {
             try
             {
-                Log.Information("Get data from file");
+                _loggerService.CreateLog(LoggerService.LogType.Info, "Get data from file", null);
                 var messages = GetMessages(100);
 
                 messages.ForEach(message =>
                 {
                     _mailService.SendEmail(message.Email, message.Body, message.Subject);
-                    Log.Information($"Message {message.Subject} to {message.Email} was sent");
                 });
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Messages send error: ");
+                _loggerService.CreateLog(LoggerService.LogType.Error, "Messages send error", ex);
             }
         }
 

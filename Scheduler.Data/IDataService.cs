@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Scheduler.Data.Interfaces
+namespace Scheduler.Data
 {
     public interface IDataService
     {

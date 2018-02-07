@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F685DFB7-FB0F-4CEE-8849-BA55C0F3F45F}</ProjectGuid>
+    <ProjectGuid>{CD9FBE72-686E-4341-960B-871896E583F1}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Scheduler.Mailer</RootNamespace>
-    <AssemblyName>Scheduler.Mailer</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scheduler.Logger</RootNamespace>
+    <AssemblyName>Scheduler.Logger</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,21 +29,27 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="FluentMailer, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentMailer.1.1.4\lib\FluentMailer.dll</HintPath>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.5.0\lib\net46\Serilog.dll</HintPath>
     </Reference>
-    <Reference Include="FluentMailer.Factory, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentMailer.Factory.1.1.4\lib\FluentMailer.Factory.dll</HintPath>
+    <Reference Include="Serilog.Sinks.ColoredConsole, Version=3.0.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.ColoredConsole.3.0.1\lib\net45\Serilog.Sinks.ColoredConsole.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
-      <HintPath>..\packages\RazorEngine.3.0.0\lib\net40\RazorEngine.dll</HintPath>
+    <Reference Include="Serilog.Sinks.Console, Version=3.0.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Console.3.0.1\lib\net45\Serilog.Sinks.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.File.3.2.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Literate, Version=3.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Literate.3.0.0\lib\net45\Serilog.Sinks.Literate.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.RollingFile, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.RollingFile.3.3.0\lib\net45\Serilog.Sinks.RollingFile.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,9 +57,6 @@
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\RazorEngine.3.0.0\lib\net40\System.Web.Razor.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,19 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IMailService.cs" />
-    <Compile Include="MailerModule.cs" />
+    <Compile Include="ILoggerService.cs" />
+    <Compile Include="LoggerModule.cs" />
+    <Compile Include="LoggerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MailService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Scheduler.Logger\Scheduler.Logger.csproj">
-      <Project>{CD9FBE72-686E-4341-960B-871896E583F1}</Project>
-      <Name>Scheduler.Logger</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

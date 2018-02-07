@@ -1,7 +1,6 @@
 ﻿using Autofac;
 using FluentMailer.Factory;
 using FluentMailer.Interfaces;
-using Scheduler.Mailer.Interfaces;
 
 namespace Scheduler.Mailer
 {

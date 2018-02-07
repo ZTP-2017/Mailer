@@ -68,24 +68,6 @@
     <Reference Include="RazorEngine, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
       <HintPath>..\packages\RazorEngine.3.0.0\lib\net40\RazorEngine.dll</HintPath>
     </Reference>
-    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\packages\Serilog.2.5.0\lib\net46\Serilog.dll</HintPath>
-    </Reference>
-    <Reference Include="Serilog.Sinks.ColoredConsole, Version=3.0.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\packages\Serilog.Sinks.ColoredConsole.3.0.1\lib\net45\Serilog.Sinks.ColoredConsole.dll</HintPath>
-    </Reference>
-    <Reference Include="Serilog.Sinks.Console, Version=3.0.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\packages\Serilog.Sinks.Console.3.0.1\lib\net45\Serilog.Sinks.Console.dll</HintPath>
-    </Reference>
-    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\packages\Serilog.Sinks.File.3.2.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
-    </Reference>
-    <Reference Include="Serilog.Sinks.Literate, Version=3.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\packages\Serilog.Sinks.Literate.3.0.0\lib\net45\Serilog.Sinks.Literate.dll</HintPath>
-    </Reference>
-    <Reference Include="Serilog.Sinks.RollingFile, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\packages\Serilog.Sinks.RollingFile.3.3.0\lib\net45\Serilog.Sinks.RollingFile.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -127,6 +109,10 @@
     <ProjectReference Include="..\Scheduler.Data\Scheduler.Data.csproj">
       <Project>{b5187eec-ce11-4224-8224-52feca6e9b63}</Project>
       <Name>Scheduler.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scheduler.Logger\Scheduler.Logger.csproj">
+      <Project>{cd9fbe72-686e-4341-960b-871896e583f1}</Project>
+      <Name>Scheduler.Logger</Name>
     </ProjectReference>
     <ProjectReference Include="..\Scheduler.Mailer\Scheduler.Mailer.csproj">
       <Project>{f685dfb7-fb0f-4cee-8849-ba55c0f3f45f}</Project>
